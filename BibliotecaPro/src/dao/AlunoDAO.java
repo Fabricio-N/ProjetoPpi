@@ -21,7 +21,7 @@ public class AlunoDAO {
 		connection = ConnectionFactory.getConnection();
 	}
 
-	public boolean inserir(Aluno aluno) {
+	public boolean inserir(Aluno aluno) { 
 
 		String sql = "insert into alunos (nome, matricula, cpf, endereco, dataNascimento) values (?, ?, ?, ?, ?);";
 
