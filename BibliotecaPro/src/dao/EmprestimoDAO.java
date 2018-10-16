@@ -22,7 +22,7 @@ public class EmprestimoDAO {
 
 	public boolean inserir(Emprestimo emprestimo) {
 
-		String query = "insert into emprestimos (aluno, livro, dataEmprestimo) values (?, ?, ?);";
+		String query = "insert into emprestimos (aluno, livro, dataEmprestimo, dataDevolucao) values (?, ?, ?, ?);";
 
 		try {
 			PreparedStatement p = connection.prepareStatement(query);
@@ -33,6 +33,7 @@ public class EmprestimoDAO {
 			p.setLong(1, emprestimo.getAluno().getId());
 			p.setLong(2, emprestimo.getLivro().getId());
 			p.setDate(3, new java.sql.Date(calendarioEF));
+			p.setDate(4, new java.sql.Date(calendarioEF));
 
 			p.execute();
 			p.close();

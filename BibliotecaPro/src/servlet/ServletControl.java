@@ -15,15 +15,15 @@ public class ServletControl extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-			String parametro = request.getParameter("logica");
-			String nomeDaClasse = "servlet." + parametro;
-			try {
+		String parametro = request.getParameter("logica");
+		String nomeDaClasse = "servlet." + parametro;
+		try {
 			Class classe = Class.forName(nomeDaClasse);
 			Logica logica = (Logica) classe.newInstance();
 			String pagina = logica.executa(request, response);
 			request.getRequestDispatcher(pagina).forward(request, response);
-			} catch (Exception e) {
+		} catch (Exception e) {
 			throw new ServletException("Excecao lancada", e);
-			}
-			}
+		}
+	}
 }

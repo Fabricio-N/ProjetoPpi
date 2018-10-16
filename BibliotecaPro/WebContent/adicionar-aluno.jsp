@@ -8,15 +8,29 @@
 <title>Formulário</title>
 <link rel="stylesheet" type="text/css" href="css/css.css">
 </head>
+<style>
+label {
+	color: DeepPink;
+}
+
+form {
+	text-align: center;
+}
+
+h1 {
+	text-shadow: 0 0 0.2em #8f7
+}
+</style>
 <body>
 
-<c:import url="inicio.jsp"></c:import>
-	
+	<c:import url="inicio.jsp"></c:import>
+
 
 	<form action="mvc?" method="post">
-	<h1>Adicionar alunos</h1>
-	<input type="hidden" name="logica" value="AdicionarAluno">
-	
+		<h1>Adicionar alunos</h1>
+		<input type="hidden" name="logica" value="AdicionarAluno">
+
+
 		<div>
 			<label>Nome: <input type="text" name="nome"></label>
 		</div>
@@ -34,7 +48,7 @@
 				name="dataTexto"></label>
 		</div>
 		<div>
-			 <input type="submit" value="AdicionarAluno">
+			<input type="submit" value="AdicionarAluno">
 		</div>
 	</form>
 

@@ -10,11 +10,10 @@
 <title>Lista de alunos</title>
 <link rel="stylesheet" type="text/css" href="css/css.css">
 <style>
-tr{
+tr {
 	color: black;
 	background-color: white;
 }
-
 </style>
 </head>
 <body>

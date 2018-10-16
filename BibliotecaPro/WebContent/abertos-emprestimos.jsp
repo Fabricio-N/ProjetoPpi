@@ -10,10 +10,16 @@
 <title>Lista de emprestimos abertos</title>
 <link rel="stylesheet" type="text/css" href="css/css.css">
 </head>
+<style>
+tr {
+	color: black;
+	background-color: white;
+}
+</style>
 <body>
 	<c:import url="inicio.jsp"></c:import>
 	<h2>${message }</h2>
-	<table border="10">
+	<table border="10" align="center">
 		<thead>
 			<tr>
 				<th>Livro</th>
@@ -23,7 +29,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="e" items="${emprestimos}">
+			<c:forEach var="e" items="${emprestimo}">
 
 
 				<tr>
@@ -31,7 +37,9 @@
 					<td>${e.livro.titulo}</td>
 					<td>${e.aluno.matricula}</td>
 					<td>${e.dataEmprestimo.time }</td>
-					<td><a href="mvc?logica=DevolucaoLivro&aluno=${e.aluno.id }&livro=${e.livro.id}">Entrega do Livro</a></td>
+					<td><a
+						href="mvc?logica=DevolucaoLivro&aluno=${e.aluno.id }&livro=${e.livro.id}">Entrega
+							do Livro</a></td>
 				</tr>
 			</c:forEach>
 		</tbody>

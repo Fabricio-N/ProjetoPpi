@@ -11,7 +11,7 @@
 <body>
 <c:import url="inicio.jsp"></c:import>
 
-	<form action="mvc?" method="post">
+	<form action="mvc" method="post">
 		<h1>Adicionar Livro</h1>
 	<input type="hidden" name="logica" value="AdicionarLivro">
 		<div>
