@@ -23,23 +23,24 @@ tr {
 		<thead>
 			<tr>
 				<th>Livro</th>
-				<th>Matrícula</th>
+				<th>Aluno</th>
 				<th>Data do emprestimo</th>
 				<th>Devolução</th>
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="e" items="${emprestimo}">
+			<c:forEach var="emprestimo" items="${emprestimos}">
 
 
 				<tr>
 
-					<td>${e.livro.titulo}</td>
-					<td>${e.aluno.matricula}</td>
-					<td>${e.dataEmprestimo.time }</td>
+					<td>${emprestimo.livro.titulo}</td>
+					<td>${emprestimo.aluno.nome}</td>
+					<td>${emprestimo.dataEmprestimo.time }</td>
 					<td><a
 						href="mvc?logica=DevolucaoLivro&aluno=${e.aluno.id }&livro=${e.livro.id}">Entrega
 							do Livro</a></td>
+					
 				</tr>
 			</c:forEach>
 		</tbody>

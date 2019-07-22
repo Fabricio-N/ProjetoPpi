@@ -80,11 +80,12 @@ public class EmprestimoDAO {
 
 			while (rs.next()) {
 				Emprestimo emprestimo = new Emprestimo();
+				
 				Livro livro = new LivroDAO().getLivroByID(rs.getLong("livro"));
-				Aluno aluno = new AlunoDAO().getAlunoByID(rs.getLong("aluno"));
-
 				emprestimo.setLivro(livro);
+				Aluno aluno = new AlunoDAO().getAlunoByID(rs.getLong("aluno"));
 				emprestimo.setAluno(aluno);
+				
 				Calendar data = Calendar.getInstance();
 				data.setTime(rs.getDate("dataEmprestimo"));
 				emprestimo.setDataEmprestimo(data);

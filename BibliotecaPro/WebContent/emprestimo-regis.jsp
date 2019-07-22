@@ -36,6 +36,7 @@ tr {
 					<td>${emprestimo.livro.titulo }</td>
 					<td>${emprestimo.dataEmprestimo.time }</td>
 					<td>${emprestimo.dataDevolucao.time }</td>
+					
 				</tr>
 			</c:forEach>
 		</tbody>
